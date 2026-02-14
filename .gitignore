@@ -1,4 +1,4 @@
-*.log
+vendor/
 .DS_Store
 .env
 .env.backup

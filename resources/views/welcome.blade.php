@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raza Boiler Poultry &amp; Chicken Shop</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/_sdk/element_sdk.js"></script>
+  <!-- <script src="/assets/js/element_sdk.js"></script> -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
     body {
@@ -45,7 +45,7 @@
     }
   </style>
   <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  /* <script src="/assets/js/data_sdk.js" type="text/javascript"></script> */
  </head>
  <body class="h-full font-body">
   <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Admin Access Modal -->
@@ -622,7 +622,7 @@
       if (e.target === adminModal) {
         adminModal.classList.add('hidden');
         adminForm.reset();
-        adminError.classList.add('hidden');
+        adminError.classList.add('hidden');```          
       }
     });
   </script>
