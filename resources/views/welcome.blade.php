@@ -622,7 +622,7 @@
       if (e.target === adminModal) {
         adminModal.classList.add('hidden');
         adminForm.reset();
-        adminError.classList.add('hidden');```          
+        adminError.classList.add('hidden');
       }
     });
   </script>

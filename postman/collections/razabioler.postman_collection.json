@@ -1,0 +1,280 @@
+{
+  "info": {
+    "_postman_id": "009aac35-74d2-462e-b2c2-cff7a318c18f",
+    "name": "razabioler",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://127.0.0.1:8000/api/auth/login",
+      "id": "49b02452-3300-4e67-ad81-9c37b1905318",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "admin@example.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "Admin@123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/users",
+      "id": "6c79a49d-d4e5-430c-b75e-e2ffd24c7842",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEwOTk2MjYsImV4cCI6MTc3MTEwMzIyNiwibmJmIjoxNzcxMDk5NjI2LCJqdGkiOiI4d0FBbVhJYmI2cmNVNU9TIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.n33M7claa3br_8I6FopjLlQgFKPUPM4IxvyqBZvXlh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/users/add",
+      "id": "76e52902-2b45-4482-a8e2-634e36a1727c",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEwOTk2MjYsImV4cCI6MTc3MTEwMzIyNiwibmJmIjoxNzcxMDk5NjI2LCJqdGkiOiI4d0FBbVhJYmI2cmNVNU9TIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.n33M7claa3br_8I6FopjLlQgFKPUPM4IxvyqBZvXlh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": " New User",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "newuser",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "newuser@example.com",
+              "type": "text"
+            },
+            {
+              "key": "mobileno",
+              "value": "1234567890",
+              "type": "text"
+            },
+            {
+              "key": "dob",
+              "value": "2000-01-01",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "active",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "password",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/users/edi",
+      "id": "db39bdeb-92a6-48e5-b0dd-44e1af915c32",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEwOTk2MjYsImV4cCI6MTc3MTEwMzIyNiwibmJmIjoxNzcxMDk5NjI2LCJqdGkiOiI4d0FBbVhJYmI2cmNVNU9TIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.n33M7claa3br_8I6FopjLlQgFKPUPM4IxvyqBZvXlh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": " New User",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "newuser",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "newuser@example.com",
+              "type": "text"
+            },
+            {
+              "key": "mobileno",
+              "value": "7276574438",
+              "type": "text"
+            },
+            {
+              "key": "dob",
+              "value": "2000-01-01",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "active",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "password",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/6",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/users/activeinactive",
+      "id": "c30d87bf-8bab-4bea-9bec-240d83a44bc2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEwOTk2MjYsImV4cCI6MTc3MTEwMzIyNiwibmJmIjoxNzcxMDk5NjI2LCJqdGkiOiI4d0FBbVhJYmI2cmNVNU9TIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.n33M7claa3br_8I6FopjLlQgFKPUPM4IxvyqBZvXlh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": "inactive",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/6/status",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "6",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
