@@ -285,7 +285,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExNzYyMTAsImV4cCI6MTc3MTE3OTgxMCwibmJmIjoxNzcxMTc2MjEwLCJqdGkiOiJaWUdvazdvZnJaU2xXc0F6Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TNQWVD-3koxvVhJk4b4aj4JQ_jn_TJJFyRw7tz-cdNg",
+              "value": "{{auth_token}}",
               "type": "string"
             }
           ]
@@ -329,7 +329,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "value": "{{auth_token}}",
               "type": "string"
             }
           ]
@@ -418,7 +418,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "value": "{{auth_token}}",
               "type": "string"
             }
           ]
@@ -463,7 +463,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "value": "{{auth_token}}",
               "type": "string"
             }
           ]
@@ -508,7 +508,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "value": "{{auth_token}}",
               "type": "string"
             }
           ]
@@ -597,7 +597,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "value": "{{auth_token}}",
               "type": "string"
             }
           ]
@@ -633,6 +633,525 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/add-customer",
+      "id": "49662f58-2914-41c6-a0bd-4c1a2556daaa",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "customer_name",
+              "value": " Aniss",
+              "type": "text"
+            },
+            {
+              "key": "customer_typeid",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "customer_mobile",
+              "value": " 9868564846",
+              "type": "text"
+            },
+            {
+              "key": "customer_email",
+              "value": " info@anisse.com",
+              "type": "text"
+            },
+            {
+              "key": "customer_owner_name",
+              "value": " Anis ",
+              "type": "text"
+            },
+            {
+              "key": "customer_alternate_number",
+              "value": " 987654385",
+              "type": "text"
+            },
+            {
+              "key": "customer_location",
+              "value": " Avsari",
+              "type": "text"
+            },
+            {
+              "key": "totalsaleinkg",
+              "value": " 1000",
+              "type": "text"
+            },
+            {
+              "key": "totalbuisness",
+              "value": " 50000",
+              "type": "text"
+            },
+            {
+              "key": "totalbalance",
+              "value": " 10000",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " active",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/customers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/customers/delete",
+      "id": "36832a94-d370-4bb3-a573-a1e2004fcd8f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": " inactive",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/customers/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "customers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/customers/patch",
+      "id": "75441499-c460-496a-9491-c4213c87e53a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "customer_name",
+              "value": " Aniss",
+              "type": "text"
+            },
+            {
+              "key": "customer_typeid",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "customer_mobile",
+              "value": " 9868564846",
+              "type": "text"
+            },
+            {
+              "key": "customer_email",
+              "value": " info@anisse.com",
+              "type": "text"
+            },
+            {
+              "key": "customer_owner_name",
+              "value": " Anis ",
+              "type": "text"
+            },
+            {
+              "key": "customer_alternate_number",
+              "value": " 987654385",
+              "type": "text"
+            },
+            {
+              "key": "customer_location",
+              "value": " Avsari",
+              "type": "text"
+            },
+            {
+              "key": "totalsaleinkg",
+              "value": " 1000",
+              "type": "text"
+            },
+            {
+              "key": "totalbuisness",
+              "value": " 50000",
+              "type": "text"
+            },
+            {
+              "key": "totalbalance",
+              "value": " 10000",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " active",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/customers/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "customers",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/customers/1 /status",
+      "id": "cde9c3f4-be80-4e45-b58e-35347d260ceb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": " inactive",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/customers/4/status",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "customers",
+            "4",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/customers/get",
+      "id": "8da709de-db76-4462-af00-86f13ed89109",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "customer_name",
+              "value": " Aniss",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_typeid",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_mobile",
+              "value": " 9868564846",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_email",
+              "value": " info@anisse.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_owner_name",
+              "value": " Anis ",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_alternate_number",
+              "value": " 987654385",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_location",
+              "value": " Avsari",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "totalsaleinkg",
+              "value": " 1000",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "totalbuisness",
+              "value": " 50000",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "totalbalance",
+              "value": " 10000",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "status",
+              "value": " active",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/customers/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "customers",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/customers/gettype",
+      "id": "418e32d5-68dd-4c23-b00d-ab96b332c0a7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "customer_name",
+              "value": " Aniss",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_typeid",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_mobile",
+              "value": " 9868564846",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_email",
+              "value": " info@anisse.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_owner_name",
+              "value": " Anis ",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_alternate_number",
+              "value": " 987654385",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "customer_location",
+              "value": " Avsari",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "totalsaleinkg",
+              "value": " 1000",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "totalbuisness",
+              "value": " 50000",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "totalbalance",
+              "value": " 10000",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "status",
+              "value": " active",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/customers/types/all",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "customers",
+            "types",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "id": "70abd8b2-e3d7-499a-8b56-ea248471eaed",
+      "key": "auth_token",
+      "value": "",
+      "type": "default"
     }
   ]
 }
