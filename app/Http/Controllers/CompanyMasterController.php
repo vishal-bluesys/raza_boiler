@@ -96,7 +96,12 @@ class CompanyMasterController extends Controller
         try {
             $company->update($validated);
             // Update or create user entry
-            $user = User::where('username', $company->company_name)->first();
+            $companyUser = CompanyUser::where('companyid', $company->id)->first();
+            if ($companyUser) {
+                $user = User::find($companyUser->userid);
+            } else {
+                $user = null;
+            }
             if ($user) {
                 $user->update([
                     'name' => $company->company_owner_name ?? $company->company_name,
@@ -140,9 +145,12 @@ class CompanyMasterController extends Controller
         DB::beginTransaction();
         try {
             $company->update(['status' => $validated['status']]);
-            $user = User::where('username', $company->company_name)->first();
-            if ($user) {
-                $user->update(['status' => $validated['status']]);
+            $companyUser = CompanyUser::where('companyid', $company->id)->first();
+            if ($companyUser) {
+                $user = User::find($companyUser->userid);
+                if ($user) {
+                    $user->update(['status' => $validated['status']]);
+                }
             }
             DB::commit();
             return response()->json($company);

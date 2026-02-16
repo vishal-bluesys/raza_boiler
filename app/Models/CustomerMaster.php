@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CustomerMaster extends Model
 {
     use HasFactory;
+    protected $table = 'customer_master';
     protected $fillable = [
         'customer_name',
         'customer_typeid',

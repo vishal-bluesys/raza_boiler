@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -61,7 +62,7 @@ class UserController extends Controller
     // Add user
     public function store(Request $request)
     {
-        $data = $request->validate([
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users',
             'email' => 'required|email|unique:users',
@@ -70,6 +71,11 @@ class UserController extends Controller
             'status' => 'required|in:active,inactive',
             'password' => 'required|string|min:6',
         ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+        $data = $validator->validated();
+
         $data['password'] = bcrypt($data['password']);
         $user = User::create($data);
         return response()->json(['message' => 'User created successfully', 'user' => $user], 201);
