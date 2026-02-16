@@ -1299,10 +1299,15 @@
           "raw": "{\n  \"vehicletype\": \"Truck\"\n}"
         },
         "url": {
-          "raw": "{{base_url}}/api/vehicles/1",
+          "raw": "http://127.0.0.1:8000/api/vehicles/1",
+          "protocol": "http",
           "host": [
-            "{{base_url}}"
+            "127",
+            "0",
+            "0",
+            "1"
           ],
+          "port": "8000",
           "path": [
             "api",
             "vehicles",
@@ -1457,11 +1462,504 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get All Items",
+      "id": "57fb5583-dec0-4e18-a37a-efed0ed6e3ba",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/items",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Item By ID",
+      "id": "3322d26c-52f1-4ec7-9c22-dddb111e9850",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNzA5ODAsImV4cCI6MTc3MTI3NDU4MCwibmJmIjoxNzcxMjcwOTgwLCJqdGkiOiJydmVDdnBiTXFWblB6STlOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AwBOhGOyz2WXzRSMZF8kPSGUKtHRoNhCP_zpV1A4ks0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/items/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "items",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Item",
+      "id": "c745913a-1d71-40b7-b20c-344a80d2c850",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNzA5ODAsImV4cCI6MTc3MTI3NDU4MCwibmJmIjoxNzcxMjcwOTgwLCJqdGkiOiJydmVDdnBiTXFWblB6STlOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AwBOhGOyz2WXzRSMZF8kPSGUKtHRoNhCP_zpV1A4ks0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"itemname\": \"Test Item\",\n  \"itemslug\": \"test-item\",\n  \"customertypeid\": 1\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/items",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Item",
+      "id": "39643ee4-3adc-40d8-9931-8136c10102ad",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"itemname\": \"Updated Item\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/items/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "items",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Item",
+      "id": "1a874166-29fb-4231-8503-9be9f6e182aa",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNzA5ODAsImV4cCI6MTc3MTI3NDU4MCwibmJmIjoxNzcxMjcwOTgwLCJqdGkiOiJydmVDdnBiTXFWblB6STlOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AwBOhGOyz2WXzRSMZF8kPSGUKtHRoNhCP_zpV1A4ks0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/items/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "items",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Maitainance Types",
+      "id": "6eac69a8-faa7-43db-8104-03273dbff728",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNzA5ODAsImV4cCI6MTc3MTI3NDU4MCwibmJmIjoxNzcxMjcwOTgwLCJqdGkiOiJydmVDdnBiTXFWblB6STlOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AwBOhGOyz2WXzRSMZF8kPSGUKtHRoNhCP_zpV1A4ks0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance-types",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance-types"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Maitainance Type",
+      "id": "8d4703e0-0ee0-4464-b733-9d409dba8870",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"maintanancetype\": \"Oil Change\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance-types",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance-types"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Maitainance Type",
+      "id": "b75724b1-a606-4af2-85a7-a4de3312b1a6",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"maintanancetype\": \"Tyre Change\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance-types/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance-types",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Maitainance Type By ID",
+      "id": "5ae8918a-c4fc-4333-8038-2d29b2f959d6",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance-types/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance-types",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Maitainance Type",
+      "id": "b2d92190-113a-4a5a-b649-8f4329e83d2b",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance-types/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance-types",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Maintanance",
+      "id": "4b10e2d4-9674-4460-85d6-6f19eb9e7ef7",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNzA5ODAsImV4cCI6MTc3MTI3NDU4MCwibmJmIjoxNzcxMjcwOTgwLCJqdGkiOiJydmVDdnBiTXFWblB6STlOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AwBOhGOyz2WXzRSMZF8kPSGUKtHRoNhCP_zpV1A4ks0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Maintanance By ID",
+      "id": "9e164368-8a04-4f6a-8c77-ee94eba182b7",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNzA5ODAsImV4cCI6MTc3MTI3NDU4MCwibmJmIjoxNzcxMjcwOTgwLCJqdGkiOiJydmVDdnBiTXFWblB6STlOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AwBOhGOyz2WXzRSMZF8kPSGUKtHRoNhCP_zpV1A4ks0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Maintanance",
+      "id": "6d4d187e-92c2-4d51-8050-f28d7d11d820",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNzA5ODAsImV4cCI6MTc3MTI3NDU4MCwibmJmIjoxNzcxMjcwOTgwLCJqdGkiOiJydmVDdnBiTXFWblB6STlOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AwBOhGOyz2WXzRSMZF8kPSGUKtHRoNhCP_zpV1A4ks0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"vehicleid\": 2,\n  \"maintanancetype\": 1,\n  \"maintanancecost\": 100.5,\n  \"maintanancedate\": \"2026-02-17\",\n  \"created_by\": 1\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Maintanance",
+      "id": "f8f15c30-af5f-49ba-86b3-6d1a713a9815",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"maintanancecost\": 120.0\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Maintanance",
+      "id": "3e1fe6dd-a10a-45a8-9f57-562c31e7cc8c",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/maintanance/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "maintanance",
+            "1"
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "variable": [
     {
-      "id": "ea8d97cf-bcd1-4e27-8ad2-5bb6e68b5cbd",
+      "id": "a5489f77-2a4d-4101-9029-a6d8134c8616",
       "key": "auth_token",
       "value": "",
       "type": "default"

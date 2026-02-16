@@ -42,7 +42,7 @@ Route::prefix('customers')->middleware(['jwt.auth'])->group(function () {
     Route::prefix('vehicles')->middleware(['jwt.auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\VehicleMasterController::class, 'index']);
         Route::get('/{id}', [App\Http\Controllers\VehicleMasterController::class, 'show']);
-        Route::post('/', [App\Http\Controllers\VehicleMasterController::class, 'store']);
+        Route::post('/add', [App\Http\Controllers\VehicleMasterController::class, 'store']);
         Route::put('/{id}', [App\Http\Controllers\VehicleMasterController::class, 'update']);
         Route::delete('/{id}', [App\Http\Controllers\VehicleMasterController::class, 'destroy']);
     });
@@ -55,6 +55,33 @@ Route::prefix('customers')->middleware(['jwt.auth'])->group(function () {
         Route::put('/{id}', [App\Http\Controllers\VehicleTypeMasterController::class, 'update']);
         Route::delete('/{id}', [App\Http\Controllers\VehicleTypeMasterController::class, 'destroy']);
     });
+    
+        // ItemMaster CRUD
+        Route::prefix('items')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/', [App\Http\Controllers\ItemMasterController::class, 'index']);
+            Route::get('/{id}', [App\Http\Controllers\ItemMasterController::class, 'show']);
+            Route::post('/', [App\Http\Controllers\ItemMasterController::class, 'store']);
+            Route::put('/{id}', [App\Http\Controllers\ItemMasterController::class, 'update']);
+            Route::delete('/{id}', [App\Http\Controllers\ItemMasterController::class, 'destroy']);
+        });
+    
+        // Maintanance CRUD
+        Route::prefix('maintanance')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/', [App\Http\Controllers\MaintananceController::class, 'index']);
+            Route::get('/{id}', [App\Http\Controllers\MaintananceController::class, 'show']);
+            Route::post('/', [App\Http\Controllers\MaintananceController::class, 'store']);
+            Route::put('/{id}', [App\Http\Controllers\MaintananceController::class, 'update']);
+            Route::delete('/{id}', [App\Http\Controllers\MaintananceController::class, 'destroy']);
+        });
+    
+        // MaitainanceType CRUD
+        Route::prefix('maintanance-types')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/', [App\Http\Controllers\MaitainanceTypeController::class, 'index']);
+            Route::get('/{id}', [App\Http\Controllers\MaitainanceTypeController::class, 'show']);
+            Route::post('/', [App\Http\Controllers\MaitainanceTypeController::class, 'store']);
+            Route::put('/{id}', [App\Http\Controllers\MaitainanceTypeController::class, 'update']);
+            Route::delete('/{id}', [App\Http\Controllers\MaitainanceTypeController::class, 'destroy']);
+        });
 
 Route::prefix('auth')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
