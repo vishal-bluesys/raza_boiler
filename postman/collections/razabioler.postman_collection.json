@@ -1144,11 +1144,324 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get All Vehicles",
+      "id": "2a467460-2825-42d7-a5cf-5b1344e7fcfd",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/vehicles",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Vehicle By ID",
+      "id": "958a6234-f231-4843-9e6d-a5225453932c",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/vehicles/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicles",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Vehicle",
+      "id": "1308ce3c-d5b5-40f0-92c7-ce77a112ddee",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNjcxNDgsImV4cCI6MTc3MTI3MDc0OCwibmJmIjoxNzcxMjY3MTQ4LCJqdGkiOiJIeXFKakRZcjZkQnZJUGN3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FwQAWzvj-gftO0Y_l8X8qLruT089ymVnNkFFWHClOWw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "vehicletype",
+              "value": " 1",
+              "type": "text"
+            },
+            {
+              "key": "vehicalid",
+              "value": " V123",
+              "type": "text"
+            },
+            {
+              "key": "rcnumber",
+              "value": " RC123",
+              "type": "text"
+            },
+            {
+              "key": "vehicalmodel",
+              "value": " ModelX",
+              "type": "text"
+            },
+            {
+              "key": "ownername",
+              "value": " John Doe",
+              "type": "text"
+            },
+            {
+              "key": "owneraddress",
+              "value": " 123 Street",
+              "type": "text"
+            },
+            {
+              "key": "dateofjoining\"",
+              "value": " 2026-02-17",
+              "type": "text"
+            },
+            {
+              "key": "contactpersonname",
+              "value": " Jane Doe",
+              "type": "text"
+            },
+            {
+              "key": "contactperson_number\"",
+              "value": " 9876543210,",
+              "type": "text"
+            },
+            {
+              "key": "created_by",
+              "value": " 1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/vehicles",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Vehicle",
+      "id": "fb6b1589-4cc5-4b4b-b317-3b6ff200107f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNjcxNDgsImV4cCI6MTc3MTI3MDc0OCwibmJmIjoxNzcxMjY3MTQ4LCJqdGkiOiJIeXFKakRZcjZkQnZJUGN3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FwQAWzvj-gftO0Y_l8X8qLruT089ymVnNkFFWHClOWw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"vehicletype\": \"Truck\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/vehicles/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicles",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Vehicle",
+      "id": "594f00cb-21a6-48e4-b2d4-bdec45726da7",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNjcxNDgsImV4cCI6MTc3MTI3MDc0OCwibmJmIjoxNzcxMjY3MTQ4LCJqdGkiOiJIeXFKakRZcjZkQnZJUGN3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FwQAWzvj-gftO0Y_l8X8qLruT089ymVnNkFFWHClOWw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/vehicles/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicles",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Vehicle Types",
+      "id": "b2f7c635-6fd8-4af1-8960-ca77d9517268",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEyNjcxNDgsImV4cCI6MTc3MTI3MDc0OCwibmJmIjoxNzcxMjY3MTQ4LCJqdGkiOiJIeXFKakRZcjZkQnZJUGN3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FwQAWzvj-gftO0Y_l8X8qLruT089ymVnNkFFWHClOWw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/vehicle-types",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicle-types"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Vehicle Type By ID",
+      "id": "0d58e0fa-f250-4949-9b35-0b1f35205be0",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/vehicle-types/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicle-types",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Vehicle Type",
+      "id": "203a8064-60de-4a81-924a-54c9ed8740ed",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"vehicletype\": \"Car\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/vehicle-types",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicle-types"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Vehicle Type",
+      "id": "c8e85ab9-3cd4-4462-aa48-6eafe7b69f9b",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"vehicletype\": \"Truck\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/vehicle-types/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicle-types",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Vehicle Type",
+      "id": "1a0a2753-421f-425f-bdbf-69358cf4997b",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/vehicle-types/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "vehicle-types",
+            "1"
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "variable": [
     {
-      "id": "70abd8b2-e3d7-499a-8b56-ea248471eaed",
+      "id": "ea8d97cf-bcd1-4e27-8ad2-5bb6e68b5cbd",
       "key": "auth_token",
       "value": "",
       "type": "default"

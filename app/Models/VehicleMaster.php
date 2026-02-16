@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class VehicleMaster extends Model
 {
     use HasFactory;
+    protected $table = 'vehiclemaster';
     // Define fillable fields as per your table structure
     protected $fillable = [
         'vehicletype',
