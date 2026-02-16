@@ -11,11 +11,11 @@ return new class extends Migration
         Schema::create('vehiclemaster', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('vehicletype');
-            $table->string('RTONUMBER')->nullable();
-            $table->string('RCNUMBER')->nullable();
-            $table->string('Chasisnumber')->nullable();
-            $table->string('Ownername')->nullable();
-            $table->string('Owneraddress')->nullable();
+            $table->string('vehicalid')->nullable();
+            $table->string('rcnumber')->nullable();
+            $table->string('vehicalmodel')->nullable();
+            $table->string('ownername')->nullable();
+            $table->string('owneraddress')->nullable();
             $table->date('dateofjoining')->nullable();
             $table->string('contactpersonname')->nullable();
             $table->string('contactperson_number', 20)->nullable();

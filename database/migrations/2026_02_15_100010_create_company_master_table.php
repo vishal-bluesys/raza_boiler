@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('company_mobile', 20)->nullable();
             $table->string('company_email')->nullable();
             $table->string('company_owner_name')->nullable();
-            $table->string('company_alternate_number', 20)->nullable();
+            $table->string('company_gst_number', 100)->nullable();
             $table->string('company_location')->nullable();
             $table->decimal('totalpurchaseinkg', 12, 2)->default(0);
             $table->decimal('totalbuisness', 15, 2)->default(0);

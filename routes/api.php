@@ -18,6 +18,15 @@ Route::prefix('users')->middleware(['jwt.auth'])->group(function () {
     Route::patch('/{id}/status', [UserController::class, 'setStatus']); // Set user status
 });
 
+Route::prefix('company-master')->middleware(['jwt.auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\CompanyMasterController::class, 'index']);
+    Route::get('/{id}', [App\Http\Controllers\CompanyMasterController::class, 'show']);
+    Route::post('/', [App\Http\Controllers\CompanyMasterController::class, 'store']);
+    Route::put('/{id}', [App\Http\Controllers\CompanyMasterController::class, 'update']);
+    Route::delete('/{id}', [App\Http\Controllers\CompanyMasterController::class, 'destroy']);
+    Route::patch('/{id}/status', [App\Http\Controllers\CompanyMasterController::class, 'updateStatus']);
+});
+
 Route::prefix('auth')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
     Route::middleware(['jwt.auth'])->get('me', [AuthController::class, 'me']);

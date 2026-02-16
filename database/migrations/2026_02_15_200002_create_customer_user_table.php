@@ -8,15 +8,16 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('vouchers_type', function (Blueprint $table) {
+        Schema::create('customer_user', function (Blueprint $table) {
             $table->id();
-            $table->string('vouchername');
+            $table->unsignedBigInteger('customerid');
+            $table->unsignedBigInteger('userid');
             $table->timestamp('created_at')->nullable();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('vouchers_type');
+        Schema::dropIfExists('customer_user');
     }
 };

@@ -13,6 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('vehicleid');
             $table->unsignedBigInteger('maintanancetype');
             $table->decimal('maintanancecost', 15, 2)->default(0);
+            $table->date('maintanancedate')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->timestamps();
             $table->unsignedBigInteger('updated_by')->nullable();

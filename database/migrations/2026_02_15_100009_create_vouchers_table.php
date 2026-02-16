@@ -10,14 +10,17 @@ return new class extends Migration
     {
         Schema::create('vouchers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Vouchertype');
+            $table->unsignedBigInteger('vouchertype');
+            $table->string('vouchernumber')->nullable();
             $table->string('employeename')->nullable();
             $table->unsignedBigInteger('employeeid')->nullable();
-            $table->decimal('Voucheramount', 15, 2)->default(0);
+            $table->decimal('voucheramount', 15, 2)->default(0);
             $table->timestamp('created_at')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->timestamp('updated_at')->nullable();
 
-            $table->foreign('Vouchertype')->references('id')->on('vouchers_type')->onDelete('cascade');
+            $table->foreign('vouchertype')->references('id')->on('vouchers_type')->onDelete('cascade');
         });
     }
 

@@ -239,12 +239,12 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzEwOTk2MjYsImV4cCI6MTc3MTEwMzIyNiwibmJmIjoxNzcxMDk5NjI2LCJqdGkiOiI4d0FBbVhJYmI2cmNVNU9TIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.n33M7claa3br_8I6FopjLlQgFKPUPM4IxvyqBZvXlh0",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExNzYyMTAsImV4cCI6MTc3MTE3OTgxMCwibmJmIjoxNzcxMTc2MjEwLCJqdGkiOiJaWUdvazdvZnJaU2xXc0F6Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TNQWVD-3koxvVhJk4b4aj4JQ_jn_TJJFyRw7tz-cdNg",
               "type": "string"
             }
           ]
         },
-        "method": "PATCH",
+        "method": "GET",
         "header": [],
         "body": {
           "mode": "urlencoded",
@@ -270,6 +270,364 @@
             "api",
             "users",
             "6",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company-master",
+      "id": "8b7e4934-f35a-4724-ae3c-47e4ad83910c",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExNzYyMTAsImV4cCI6MTc3MTE3OTgxMCwibmJmIjoxNzcxMTc2MjEwLCJqdGkiOiJaWUdvazdvZnJaU2xXc0F6Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TNQWVD-3koxvVhJk4b4aj4JQ_jn_TJJFyRw7tz-cdNg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": "inactive",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company-master",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company-master"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/add-company",
+      "id": "b21069d8-7d94-4229-b36c-ec46aa31260b",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "company_name",
+              "value": " Acme d Ltd",
+              "type": "text"
+            },
+            {
+              "key": "company_mobile",
+              "value": " 1234567891",
+              "type": "text"
+            },
+            {
+              "key": "company_email",
+              "value": " info2@acme.com",
+              "type": "text"
+            },
+            {
+              "key": "company_owner_name",
+              "value": " John Doe",
+              "type": "text"
+            },
+            {
+              "key": "company_alternate_number",
+              "value": " 987654321",
+              "type": "text"
+            },
+            {
+              "key": "company_location",
+              "value": " New York",
+              "type": "text"
+            },
+            {
+              "key": "totalpurchaseinkg",
+              "value": " 1000",
+              "type": "text"
+            },
+            {
+              "key": "totalbuisness",
+              "value": " 50000",
+              "type": "text"
+            },
+            {
+              "key": "totalbalance",
+              "value": " 10000",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " active",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company-master",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company-master"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company-master/show",
+      "id": "f9e228f7-2be4-4f83-a1de-be0bd58728d1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": "inactive",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company-master/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company-master",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company-master/delete",
+      "id": "42e92393-b143-4b6f-a507-17d6558ea4c4",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": "inactive",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company-master/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company-master",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/update-company",
+      "id": "7334db53-acdb-47b9-8e09-200c3aa7d996",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "company_name",
+              "value": " Acme d Ltd",
+              "type": "text"
+            },
+            {
+              "key": "company_mobile",
+              "value": " 1234567891",
+              "type": "text"
+            },
+            {
+              "key": "company_email",
+              "value": " info2@acme.com",
+              "type": "text"
+            },
+            {
+              "key": "company_owner_name",
+              "value": " John Doe",
+              "type": "text"
+            },
+            {
+              "key": "company_alternate_number",
+              "value": " 987654321",
+              "type": "text"
+            },
+            {
+              "key": "company_location",
+              "value": " New York",
+              "type": "text"
+            },
+            {
+              "key": "totalpurchaseinkg",
+              "value": " 1000",
+              "type": "text"
+            },
+            {
+              "key": "totalbuisness",
+              "value": " 50000",
+              "type": "text"
+            },
+            {
+              "key": "totalbalance",
+              "value": " 10000",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " active",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company-master",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company-master"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company-master/activeinactive",
+      "id": "c5b566b4-d6a7-49d2-b85a-6729fa59b9f8",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzExOTkzNTEsImV4cCI6MTc3MTIwMjk1MSwibmJmIjoxNzcxMTk5MzUxLCJqdGkiOiJSdW4zQm9YZW14c2FWOEhCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uoOH75lluLPOkywQRrBAJvKtBZB3RABaCHeDbv0Y9Ww",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": "active",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company-master/4/status",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company-master",
+            "4",
             "status"
           ]
         }
