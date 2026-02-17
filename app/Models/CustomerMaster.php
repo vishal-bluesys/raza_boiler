@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Activitylog\LogOptions;
 
 class CustomerMaster extends Model
 {
     use HasFactory;
+    use LogsActivity;
     protected $table = 'customer_master';
     protected $fillable = [
         'customer_name',
@@ -22,4 +25,12 @@ class CustomerMaster extends Model
         'totalbalance',
         'status',
     ];
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logAll()
+            ->logOnlyDirty()
+            ->dontSubmitEmptyLogs();
+    }
 }

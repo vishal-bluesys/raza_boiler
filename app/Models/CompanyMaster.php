@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Activitylog\LogOptions;
 
 class CompanyMaster extends Model
 {
     use HasFactory;
+    use LogsActivity;
     protected $table = 'company_master';
     // Define fillable fields as per your table structure
     protected $fillable = [
@@ -30,5 +33,13 @@ class CompanyMaster extends Model
     public function users()
     {
         return $this->hasManyThrough(User::class, CompanyUser::class, 'companyid', 'id', 'id', 'userid');
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logAll()
+            ->logOnlyDirty()
+            ->dontSubmitEmptyLogs();
     }
 }

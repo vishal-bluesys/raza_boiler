@@ -3,9 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
-class Module extends Model
-{
+use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Activitylog\LogOptions;
+class Module extends Model{
+    use LogsActivity;
     protected $table = 'modules';
     protected $fillable = [
         'name',
@@ -15,4 +16,11 @@ class Module extends Model
         'created_at',
     ];
     public $timestamps = false;
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logAll()
+            ->logOnlyDirty()
+            ->dontSubmitEmptyLogs();
+    }
 }
