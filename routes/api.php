@@ -110,6 +110,24 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
             Route::delete('/{id}', [App\Http\Controllers\MaitainanceTypeController::class, 'destroy']);
         });
 
+        Route::prefix('route-builder')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/', [App\Http\Controllers\RouteBuilderController::class, 'index']);
+            Route::get('/{id}', [App\Http\Controllers\RouteBuilderController::class, 'show']);
+            Route::post('/', [App\Http\Controllers\RouteBuilderController::class, 'store']);
+            Route::put('/{id}', [App\Http\Controllers\RouteBuilderController::class, 'update']);
+            Route::delete('/{id}', [App\Http\Controllers\RouteBuilderController::class, 'destroy']);
+            Route::patch('/{id}/status', [App\Http\Controllers\RouteBuilderController::class, 'updateStatus']);
+        });
+
+        Route::prefix('route-stops')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/', [App\Http\Controllers\RouteStopController::class, 'index']);
+            Route::get('/{id}', [App\Http\Controllers\RouteStopController::class, 'show']);
+            Route::post('/', [App\Http\Controllers\RouteStopController::class, 'store']);
+            Route::put('/{id}', [App\Http\Controllers\RouteStopController::class, 'update']);
+            Route::delete('/{id}', [App\Http\Controllers\RouteStopController::class, 'destroy']);
+            Route::patch('/{id}/status', [App\Http\Controllers\RouteStopController::class, 'updateStatus']);
+        });
+
 Route::prefix('auth')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
     Route::middleware(['jwt.auth'])->get('me', [AuthController::class, 'me']);
