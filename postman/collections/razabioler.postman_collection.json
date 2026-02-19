@@ -2351,6 +2351,382 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "get all orders",
+      "id": "9c8cf91a-67f4-4861-9779-3f2d1a42ba3f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Order",
+      "id": "4674a01f-7311-4a3e-a436-1131d6f5f8bd",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"customerid\": 1,\r\n  \"orderdate\": \"2026-02-19\",\r\n  \"orderstatus\": \"intransit\",\r\n  \"created_by\": 1,\r\n  \"items\": [\r\n    {\r\n      \"itemid\": 1,\r\n      \"itemweight\": 10,\r\n      \"status\": \"ordered\",\r\n      \"created_by\": 1\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Order",
+      "id": "75b3d87a-0fca-4ec0-bcb4-839efdfe8531",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"customerid\": 1,\r\n  \"orderdate\": \"2026-02-19\",\r\n  \"orderstatus\": \"intransit\",\r\n  \"created_by\": 1,\r\n  \"items\": [\r\n    {\r\n      \"itemid\": 1,\r\n      \"itemweight\": 10,\r\n      \"status\": \"ordered\",\r\n      \"created_by\": 1\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Order",
+      "id": "d3c096e5-c582-427e-9666-22a65b5d89e6",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"customerid\": 1,\r\n  \"orderdate\": \"2026-02-19\",\r\n  \"orderstatus\": \"intransit\",\r\n  \"created_by\": 1,\r\n  \"items\": [\r\n    {\r\n      \"itemid\": 1,\r\n      \"itemweight\": 10,\r\n      \"status\": \"ordered\",\r\n      \"created_by\": 1\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get orderitems",
+      "id": "cc08b7ef-ffeb-4f74-be93-c8e7571917ce",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orderitems/index/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orderitems",
+            "index",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create orderitem",
+      "id": "6734e15a-b537-46cd-a310-853405547810",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"orderid\": 1,\r\n  \"itemid\": 1,\r\n  \"itemweight\": 10,\r\n  \"status\": \"ordered\",\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orderitems",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orderitems"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update orderitem",
+      "id": "fa33d4b2-1533-4cbd-9c1c-40c60f5a4fb3",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"orderid\": 1,\r\n  \"itemid\": 1,\r\n  \"itemweight\": 10,\r\n  \"status\": \"ordered\",\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orderitems/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orderitems",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete orderitem",
+      "id": "36534d13-2871-48ed-b383-854c69b94ebc",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"orderid\": 1,\r\n  \"itemid\": 1,\r\n  \"itemweight\": 10,\r\n  \"status\": \"ordered\",\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orderitems/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orderitems",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update orderitem status",
+      "id": "89aa37ab-0d90-4e55-b4fd-9d63e15e2ad4",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"orderid\": 1,\r\n  \"itemid\": 1,\r\n  \"itemweight\": 10,\r\n  \"status\": \"ordered\",\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orderitems/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orderitems",
+            "1"
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "variable": [

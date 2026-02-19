@@ -39,6 +39,7 @@ Route::prefix('customers')->middleware(['jwt.auth'])->group(function () {
     Route::patch('/{id}/status', [App\Http\Controllers\CustomerController::class, 'updateStatus']); // Update customer status
 });
 
+
 Route::prefix('purchasemaster')->middleware(['jwt.auth'])->group(function () {
     Route::get('/', [App\Http\Controllers\PurchasemasterController::class, 'index']);
     Route::get('/{id}', [App\Http\Controllers\PurchasemasterController::class, 'show']);
@@ -46,7 +47,24 @@ Route::prefix('purchasemaster')->middleware(['jwt.auth'])->group(function () {
     Route::put('/{id}', [App\Http\Controllers\PurchasemasterController::class, 'update']);
     Route::delete('/{id}', [App\Http\Controllers\PurchasemasterController::class, 'destroy']);
 });
+
+Route::prefix('orders')->middleware(['jwt.auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\OrderController::class, 'index']);
+    Route::get('/{id}', [App\Http\Controllers\OrderController::class, 'show']);
+    Route::post('/', [App\Http\Controllers\OrderController::class, 'store']);
+    Route::put('/{id}', [App\Http\Controllers\OrderController::class, 'update']);
+    Route::delete('/{id}', [App\Http\Controllers\OrderController::class, 'destroy']);
+    Route::patch('/{id}/status', [App\Http\Controllers\OrderController::class, 'updateStatus']);
+});
     
+Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
+    Route::get('/index/{id}', [App\Http\Controllers\OrderitemController::class, 'index']);
+    Route::get('/{id}', [App\Http\Controllers\OrderitemController::class, 'show']);
+    Route::post('/', [App\Http\Controllers\OrderitemController::class, 'store']);
+    Route::put('/{id}', [App\Http\Controllers\OrderitemController::class, 'update']);
+    Route::delete('/{id}', [App\Http\Controllers\OrderitemController::class, 'destroy']);
+    Route::patch('/{id}/status', [App\Http\Controllers\OrderitemController::class, 'updateStatus']);
+});
     // VehicleMaster CRUD
     Route::prefix('vehicles')->middleware(['jwt.auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\VehicleMasterController::class, 'index']);
