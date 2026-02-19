@@ -28,6 +28,7 @@ Route::prefix('company-master')->middleware(['jwt.auth'])->group(function () {
     Route::patch('/{id}/status', [App\Http\Controllers\CompanyMasterController::class, 'updateStatus']);
 });
 
+
 Route::prefix('customers')->middleware(['jwt.auth'])->group(function () {
     Route::get('/', [App\Http\Controllers\CustomerController::class, 'index']); // List customers
     Route::get('/{id}', [App\Http\Controllers\CustomerController::class, 'show']); // Show customer
@@ -36,7 +37,15 @@ Route::prefix('customers')->middleware(['jwt.auth'])->group(function () {
     Route::delete('/{id}', [App\Http\Controllers\CustomerController::class, 'destroy']); // Delete customer
     Route::get('/types/all', [App\Http\Controllers\CustomerController::class, 'customerTypes']); // Get customer types
     Route::patch('/{id}/status', [App\Http\Controllers\CustomerController::class, 'updateStatus']); // Update customer status
-    });
+});
+
+Route::prefix('purchasemaster')->middleware(['jwt.auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\PurchasemasterController::class, 'index']);
+    Route::get('/{id}', [App\Http\Controllers\PurchasemasterController::class, 'show']);
+    Route::post('/', [App\Http\Controllers\PurchasemasterController::class, 'store']);
+    Route::put('/{id}', [App\Http\Controllers\PurchasemasterController::class, 'update']);
+    Route::delete('/{id}', [App\Http\Controllers\PurchasemasterController::class, 'destroy']);
+});
     
     // VehicleMaster CRUD
     Route::prefix('vehicles')->middleware(['jwt.auth'])->group(function () {

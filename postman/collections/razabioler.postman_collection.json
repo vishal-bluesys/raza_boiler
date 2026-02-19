@@ -1955,6 +1955,402 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/purchasemaster",
+      "id": "efb8031d-c405-4a5c-ad5c-dbf32519df21",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/purchasemaster",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "purchasemaster"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-purchase",
+      "id": "947c4aa8-bd94-4bb3-a613-b9d9d7ffb8c1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "companyid",
+              "value": " 1",
+              "type": "text"
+            },
+            {
+              "key": "purchasedate",
+              "value": " 2026-02-19",
+              "type": "text"
+            },
+            {
+              "key": "purchaseqty",
+              "value": " 100",
+              "type": "text"
+            },
+            {
+              "key": "parchaseweight",
+              "value": " 50",
+              "type": "text"
+            },
+            {
+              "key": "rateofpurchase",
+              "value": " 200",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " open",
+              "type": "text"
+            },
+            {
+              "key": "created_by",
+              "value": " 1",
+              "type": "text"
+            }
+          ],
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/purchasemaster",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "purchasemaster"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-purchase",
+      "id": "4ab1de60-38e3-4091-8336-fcc46c9f9c55",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"purchasedate\": \"2026-02-19\",\r\n\"purchaseqty\": 1000,\r\n\"parchaseweight\": 600,\r\n\"rateofpurchase\": 200,\r\n\"status\": \"open\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/purchasemaster/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "purchasemaster",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all",
+      "id": "b2397236-3c5a-4e80-a0ac-20824845d5ad",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "companyid",
+              "value": " 1",
+              "type": "text"
+            },
+            {
+              "key": "purchasedate",
+              "value": " 2026-02-19",
+              "type": "text"
+            },
+            {
+              "key": "purchaseqty",
+              "value": " 100",
+              "type": "text"
+            },
+            {
+              "key": "parchaseweight",
+              "value": " 50",
+              "type": "text"
+            },
+            {
+              "key": "rateofpurchase",
+              "value": " 200",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " open",
+              "type": "text"
+            },
+            {
+              "key": "created_by",
+              "value": " 1",
+              "type": "text"
+            }
+          ],
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/purchasemaster",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "purchasemaster"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get by id",
+      "id": "3f9bbedb-f6f4-4b70-9d03-7bcb988ff4ee",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "companyid",
+              "value": " 1",
+              "type": "text"
+            },
+            {
+              "key": "purchasedate",
+              "value": " 2026-02-19",
+              "type": "text"
+            },
+            {
+              "key": "purchaseqty",
+              "value": " 100",
+              "type": "text"
+            },
+            {
+              "key": "parchaseweight",
+              "value": " 50",
+              "type": "text"
+            },
+            {
+              "key": "rateofpurchase",
+              "value": " 200",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " open",
+              "type": "text"
+            },
+            {
+              "key": "created_by",
+              "value": " 1",
+              "type": "text"
+            }
+          ],
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/purchasemaster/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "purchasemaster",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete",
+      "id": "3fbf9155-54d9-4026-81d5-439a7ea7b89c",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE0NjQwMDMsImV4cCI6MTc3MTQ2NzYwMywibmJmIjoxNzcxNDY0MDAzLCJqdGkiOiJOZm41Q2YxTzVyY2pBV1FyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wAI3osdtkZ5BeVzKJYV-r7OVOrOOiEE77IGwefLQLn0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "companyid",
+              "value": " 1",
+              "type": "text"
+            },
+            {
+              "key": "purchasedate",
+              "value": " 2026-02-19",
+              "type": "text"
+            },
+            {
+              "key": "purchaseqty",
+              "value": " 100",
+              "type": "text"
+            },
+            {
+              "key": "parchaseweight",
+              "value": " 50",
+              "type": "text"
+            },
+            {
+              "key": "rateofpurchase",
+              "value": " 200",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": " open",
+              "type": "text"
+            },
+            {
+              "key": "created_by",
+              "value": " 1",
+              "type": "text"
+            }
+          ],
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/purchasemaster/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "purchasemaster",
+            "1"
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "variable": [
