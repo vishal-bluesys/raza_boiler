@@ -120,7 +120,7 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
         });
 
         Route::prefix('route-stops')->middleware(['jwt.auth'])->group(function () {
-            Route::get('/', [App\Http\Controllers\RouteStopController::class, 'index']);
+            Route::get('/index/{id}', [App\Http\Controllers\RouteStopController::class, 'index']);
             Route::get('/{id}', [App\Http\Controllers\RouteStopController::class, 'show']);
             Route::post('/', [App\Http\Controllers\RouteStopController::class, 'store']);
             Route::put('/{id}', [App\Http\Controllers\RouteStopController::class, 'update']);

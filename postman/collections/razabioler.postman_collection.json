@@ -2727,6 +2727,383 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Create routebuilder",
+      "id": "d4e16b0d-dc06-4bcd-ad04-65595b3b6079",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"vehicleid\": 1,\r\n  \"driverid\": 1,\r\n  \"deliverydate\": \"2026-02-19\",\r\n  \"status\": \"intransit\",\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-builder",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-builder"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get routebuilder",
+      "id": "24fbf807-3bdc-4ba6-b43d-1a8ea9f636e8",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"vehicleid\": 1,\r\n  \"driverid\": 1,\r\n  \"deliverydate\": \"2026-02-19\",\r\n  \"status\": \"intransit\",\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-builder",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-builder"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get routebuilder by id",
+      "id": "526d6ace-6cf8-442e-acce-e3ebaa0871be",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-builder/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-builder",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update routebuilder by id",
+      "id": "0491af6f-78dd-4dfb-8586-d3d932a51139",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"vehicleid\": 1,\r\n  \"driverid\": 1,\r\n  \"deliverydate\": \"2026-02-19\",\r\n  \"status\": \"canceled\",\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-builder/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-builder",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete routebuilder by id",
+      "id": "3eb3400b-f57c-43d5-ab6c-27c499fd9ddf",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-builder/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-builder",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get route stops",
+      "id": "c3ff9db3-06e9-4860-a9c2-a96860f39a85",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-stops/index/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-stops",
+            "index",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create route stops",
+      "id": "e2ec1f2b-73a3-4a8b-962a-aef882363db9",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"routeid\": 1,\r\n  \"customerid\": 1,\r\n  \"itemid\": 1,\r\n  \"itemqty\": 10,\r\n  \"itemweight\": 5,\r\n  \"rateofsale\": 100,\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-stops/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-stops",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update route stops",
+      "id": "677761ee-902d-4d40-9840-38cf7ea1720a",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"routeid\": 1,\r\n  \"customerid\": 1,\r\n  \"itemid\": 1,\r\n  \"itemqty\": 10,\r\n  \"itemweight\": 5,\r\n  \"rateofsale\": 100,\r\n  \"created_by\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-stops/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-stops",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete route stops",
+      "id": "a2fb16e5-4048-429f-9a42-663e5fc9dafe",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE1MjA0OTgsImV4cCI6MTc3MTUyNDA5OCwibmJmIjoxNzcxNTIwNDk4LCJqdGkiOiJUNUZ0QWI1Q21GNEVBenZ1Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tEm04Wp4yyUMRWZLw7XmvQe4yVxpna16AuskVt5EPWM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route-stops/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route-stops",
+            "1"
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "variable": [
