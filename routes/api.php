@@ -137,10 +137,12 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
     // SaleMaster CRUD
         Route::prefix('sales')->middleware(['jwt.auth'])->group(function () {
             Route::get('/', [App\Http\Controllers\SaleMasterController::class, 'index']);
-            Route::get('/{id}', [App\Http\Controllers\SaleMasterController::class, 'show']);
+            //Route::get('/{id}', [App\Http\Controllers\SaleMasterController::class, 'show']);
             Route::post('/', [App\Http\Controllers\SaleMasterController::class, 'store']);
             Route::put('/{id}', [App\Http\Controllers\SaleMasterController::class, 'update']);
             Route::delete('/{id}', [App\Http\Controllers\SaleMasterController::class, 'destroy']);
+            Route::patch('/{id}/status', [App\Http\Controllers\SaleMasterController::class, 'updateStatus']);
+            Route::get('/getsaleitems', [App\Http\Controllers\SaleMasterController::class, 'getSaleItems']);
         });
 
         // SaleItem CRUD

@@ -16,6 +16,10 @@ class SaleMaster extends Model
     {
         return $this->hasMany(SaleItem::class, 'saleid');
     }
+    public function customer()
+    {
+        return $this->belongsTo(CustomerMaster::class, 'customerid');
+    }
 
     public function getActivitylogOptions(): LogOptions
     {

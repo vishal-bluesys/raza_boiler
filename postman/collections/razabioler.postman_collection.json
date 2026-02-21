@@ -3153,6 +3153,62 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get filtered Sales item",
+      "id": "f5e68d69-9898-4512-8c05-3861bf550869",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2Nzk0MzYsImV4cCI6MTc3MTY4MzAzNiwibmJmIjoxNzcxNjc5NDM2LCJqdGkiOiJqUTlRS0RFbm42aGZsZFc5Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uE8K2z5ZOaICqXFkusSDZ8qrH-rCPTYEsJ3YdJItba8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [],
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/sales/getsaleitems?customerid=2&saledate=2026-02-22",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "sales",
+            "getsaleitems"
+          ],
+          "query": [
+            {
+              "key": "customerid",
+              "value": "2",
+              "uuid": "e05ec4cf-7fad-4863-af0f-db85f7f18bf6"
+            },
+            {
+              "key": "saledate",
+              "value": "2026-02-22",
+              "uuid": "df0785f1-d696-4b38-b9ab-733c57eccd5f"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "variable": [

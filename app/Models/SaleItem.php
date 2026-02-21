@@ -17,6 +17,10 @@ class SaleItem extends Model
         return $this->belongsTo(SaleMaster::class, 'saleid');
     }
 
+    public function item()
+    {
+        return $this->belongsTo(ItemMaster::class, 'itemid');
+    }
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()
