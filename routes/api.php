@@ -128,7 +128,25 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
             Route::patch('/{id}/status', [App\Http\Controllers\RouteStopController::class, 'updateStatus']);
         });
 
-Route::prefix('auth')->group(function () {
-    Route::post('login', [AuthController::class, 'login']);
-    Route::middleware(['jwt.auth'])->get('me', [AuthController::class, 'me']);
-});
+    Route::prefix('auth')->group(function () {
+        Route::post('login', [AuthController::class, 'login']);
+        Route::middleware(['jwt.auth'])->get('me', [AuthController::class, 'me']);
+    });
+
+    // SaleMaster CRUD
+        Route::prefix('sales')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/', [App\Http\Controllers\SaleMasterController::class, 'index']);
+            Route::get('/{id}', [App\Http\Controllers\SaleMasterController::class, 'show']);
+            Route::post('/', [App\Http\Controllers\SaleMasterController::class, 'store']);
+            Route::put('/{id}', [App\Http\Controllers\SaleMasterController::class, 'update']);
+            Route::delete('/{id}', [App\Http\Controllers\SaleMasterController::class, 'destroy']);
+        });
+
+        // SaleItem CRUD
+        Route::prefix('saleitems')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/', [App\Http\Controllers\SaleItemController::class, 'index']);
+            Route::get('/{id}', [App\Http\Controllers\SaleItemController::class, 'show']);
+            Route::post('/', [App\Http\Controllers\SaleItemController::class, 'store']);
+            Route::put('/{id}', [App\Http\Controllers\SaleItemController::class, 'update']);
+            Route::delete('/{id}', [App\Http\Controllers\SaleItemController::class, 'destroy']);
+        });

@@ -1,0 +1,328 @@
+{
+  "info": {
+    "_postman_id": "b1e1e1e1-1111-2222-3333-444455556666",
+    "name": "SaleMaster & SaleItem API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "SaleMaster CRUD",
+      "item": [
+        {
+          "name": "List Sales",
+          "id": "9fdda538-4693-4b97-ac95-b7c86ce259fd",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/sales",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "sales"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Show Sale",
+          "id": "b7dc8a7f-7624-4f71-9cb6-8f9d79dee0c3",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/sales/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "sales",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Sale",
+          "id": "a12830b9-2eb2-45f1-a390-8ac045055df9",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerid\": 1,\n  \"saledate\": \"2026-02-21\",\n  \"salestatus\": \"open\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/sales",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "sales"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Sale",
+          "id": "cc9e3b75-9bc1-4d8f-bf24-6671fcc9694d",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerid\": 2,\n  \"saledate\": \"2026-02-22\",\n  \"salestatus\": \"close\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/sales/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "sales",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Sale",
+          "id": "0d2da0de-f373-484a-8f8a-a681bcab82b2",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/sales/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "sales",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "da724b40-152b-4478-9892-fd40719dbd8d"
+    },
+    {
+      "name": "SaleItem CRUD",
+      "item": [
+        {
+          "name": "List SaleItems",
+          "id": "6a2ade77-50de-4a9d-bc36-6d6abe7b4e1c",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/saleitems",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "saleitems"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Show SaleItem",
+          "id": "bad850fa-9441-482b-95db-2a74b4d92760",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/saleitems/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "saleitems",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create SaleItem",
+          "id": "2c40f575-d5ae-4aa9-a004-7277033bb99f",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"saleid\": 1,\n  \"itemid\": 1,\n  \"itemweight\": 10.5,\n  \"itemqty\": 2,\n  \"actualrate\": 100,\n  \"salerate\": 90,\n  \"discounttype\": \"flat\",\n  \"discount\": 5,\n  \"totalsale\": 175\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/saleitems",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "saleitems"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update SaleItem",
+          "id": "2501d3c1-8ceb-49cf-ad27-1384bc9eaba1",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"saleid\": 1,\n  \"itemid\": 2,\n  \"itemweight\": 12.0,\n  \"itemqty\": 3,\n  \"actualrate\": 110,\n  \"salerate\": 100,\n  \"discounttype\": \"percent\",\n  \"discount\": 10,\n  \"totalsale\": 270\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/saleitems/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "saleitems",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete SaleItem",
+          "id": "daa1012f-a05e-48c8-9d21-bee4077cef8c",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/saleitems/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "saleitems",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "5441c976-de57-4851-9e9b-d60cb1e56fbf"
+    }
+  ]
+}
