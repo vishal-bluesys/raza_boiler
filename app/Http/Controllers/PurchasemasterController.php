@@ -9,7 +9,7 @@ class PurchasemasterController extends Controller
 {
     public function index()
     {
-        return Purchasemaster::all();
+        return Purchasemaster::with('company')->get();
     }
 
     public function store(Request $request)
@@ -35,7 +35,7 @@ class PurchasemasterController extends Controller
 
     public function show($id)
     {
-        $purchasemaster = Purchasemaster::findOrFail($id);
+        $purchasemaster = Purchasemaster::with('company')->findOrFail($id);
         return response()->json($purchasemaster);
     }
 

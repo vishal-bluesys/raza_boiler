@@ -248,6 +248,16 @@
           "name": "Create SaleItem",
           "id": "2c40f575-d5ae-4aa9-a004-7277033bb99f",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "POST",
             "header": [
               {
@@ -257,13 +267,18 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"saleid\": 1,\n  \"itemid\": 1,\n  \"itemweight\": 10.5,\n  \"itemqty\": 2,\n  \"actualrate\": 100,\n  \"salerate\": 90,\n  \"discounttype\": \"flat\",\n  \"discount\": 5,\n  \"totalsale\": 175\n}"
+              "raw": "{\n  \"saleid\": 2,\n  \"itemid\": 1,\n  \"itemweight\": 10.5,\n  \"itemqty\": 2,\n  \"actualrate\": 100,\n  \"salerate\": 90,\n  \"discounttype\": \"flat\",\n  \"discount\": 5,\n  \"totalsale\": 175\n}"
             },
             "url": {
-              "raw": "{{base_url}}/api/saleitems",
+              "raw": "http://127.0.0.1:8000/api/saleitems",
+              "protocol": "http",
               "host": [
-                "{{base_url}}"
+                "127",
+                "0",
+                "0",
+                "1"
               ],
+              "port": "8000",
               "path": [
                 "api",
                 "saleitems"
@@ -276,6 +291,16 @@
           "name": "Update SaleItem",
           "id": "2501d3c1-8ceb-49cf-ad27-1384bc9eaba1",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "PUT",
             "header": [
               {
@@ -288,10 +313,15 @@
               "raw": "{\n  \"saleid\": 1,\n  \"itemid\": 2,\n  \"itemweight\": 12.0,\n  \"itemqty\": 3,\n  \"actualrate\": 110,\n  \"salerate\": 100,\n  \"discounttype\": \"percent\",\n  \"discount\": 10,\n  \"totalsale\": 270\n}"
             },
             "url": {
-              "raw": "{{base_url}}/api/saleitems/1",
+              "raw": "http://127.0.0.1:8000/api/saleitems/1",
+              "protocol": "http",
               "host": [
-                "{{base_url}}"
+                "127",
+                "0",
+                "0",
+                "1"
               ],
+              "port": "8000",
               "path": [
                 "api",
                 "saleitems",
@@ -305,13 +335,28 @@
           "name": "Delete SaleItem",
           "id": "daa1012f-a05e-48c8-9d21-bee4077cef8c",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzE2NDA5MzEsImV4cCI6MTc3MTY0NDUzMiwibmJmIjoxNzcxNjQwOTMyLCJqdGkiOiJyd1k5Um5sMXJEczhXSzlQIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.I4LaVf0zxVnFobLyASZmYPV720O0ElApNimoRUOr2pY",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/api/saleitems/1",
+              "raw": "http://127.0.0.1:8000/api/saleitems/1",
+              "protocol": "http",
               "host": [
-                "{{base_url}}"
+                "127",
+                "0",
+                "0",
+                "1"
               ],
+              "port": "8000",
               "path": [
                 "api",
                 "saleitems",

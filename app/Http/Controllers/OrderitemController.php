@@ -11,7 +11,7 @@ class OrderitemController extends Controller
     public function index($id = null)
     {
         if ($id) {
-            return Orderitem::where('orderid', $id)->get();
+            return Orderitem::with('item')->where('orderid', $id)->get();
         }
     }
 
@@ -37,7 +37,7 @@ class OrderitemController extends Controller
 
     public function show($id)
     {
-        $orderitem = Orderitem::findOrFail($id);
+        $orderitem = Orderitem::with('item')->findOrFail($id);
         return response()->json($orderitem);
     }
 
