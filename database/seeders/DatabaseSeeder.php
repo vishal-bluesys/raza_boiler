@@ -19,10 +19,11 @@ class DatabaseSeeder extends Seeder
             // RolePermissionSeeder::class,
             // ModuleSeeder::class,
             // UserSeeder::class,
-            CustomertypeSeeder::class,
-            VehicletypemasterSeeder::class,
-            MaitainancetypeSeeder::class,
-            VouchersTypeSeeder::class,
+            // CustomertypeSeeder::class,
+            // VehicletypemasterSeeder::class,
+            // MaitainancetypeSeeder::class,
+            // VouchersTypeSeeder::class,
+             AssignRolesSeeder::class,
         ]);
     }
 }
