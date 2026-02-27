@@ -1,0 +1,76 @@
+{
+  "name": "Report APIs",
+  "item": [
+    {
+      "name": "Sales Report",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/reports/sales?customerid=1&start_date=2024-01-01&end_date=2024-12-31&itemid=2",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "reports", "sales"],
+          "query": [
+            {"key": "customerid", "value": "1"},
+            {"key": "start_date", "value": "2024-01-01"},
+            {"key": "end_date", "value": "2024-12-31"},
+            {"key": "itemid", "value": "2"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Purchase Report",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/reports/purchase?companyid=1&start_date=2024-01-01&end_date=2024-12-31",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "reports", "purchase"],
+          "query": [
+            {"key": "companyid", "value": "1"},
+            {"key": "start_date", "value": "2024-01-01"},
+            {"key": "end_date", "value": "2024-12-31"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Maintanance Report",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/reports/maintanance?driverid=1&start_date=2024-01-01&end_date=2024-12-31&itemid=2",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "reports", "maintanance"],
+          "query": [
+            {"key": "driverid", "value": "1"},
+            {"key": "start_date", "value": "2024-01-01"},
+            {"key": "end_date", "value": "2024-12-31"},
+            {"key": "itemid", "value": "2"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order Report",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/reports/order?customerid=1&start_date=2024-01-01&end_date=2024-12-31&itemid=2",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "reports", "order"],
+          "query": [
+            {"key": "customerid", "value": "1"},
+            {"key": "start_date", "value": "2024-01-01"},
+            {"key": "end_date", "value": "2024-12-31"},
+            {"key": "itemid", "value": "2"}
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -153,3 +153,10 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
             Route::put('/{id}', [App\Http\Controllers\SaleItemController::class, 'update']);
             Route::delete('/{id}', [App\Http\Controllers\SaleItemController::class, 'destroy']);
         });
+        // Reports
+        Route::prefix('reports')->middleware(['jwt.auth'])->group(function () {
+            Route::get('/sales', [App\Http\Controllers\ReportController::class, 'salesReport']);
+            Route::get('/purchase', [App\Http\Controllers\ReportController::class, 'purchaseReport']);
+            Route::get('/maintanance', [App\Http\Controllers\ReportController::class, 'maintananceReport']);
+            Route::get('/order', [App\Http\Controllers\ReportController::class, 'orderReport']);
+        });
