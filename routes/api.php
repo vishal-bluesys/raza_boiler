@@ -147,7 +147,7 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
 
         // SaleItem CRUD
         Route::prefix('saleitems')->middleware(['jwt.auth'])->group(function () {
-            Route::get('/', [App\Http\Controllers\SaleItemController::class, 'index']);
+            Route::get('/{saleid}', [App\Http\Controllers\SaleItemController::class, 'index']);
             Route::get('/{id}', [App\Http\Controllers\SaleItemController::class, 'show']);
             Route::post('/', [App\Http\Controllers\SaleItemController::class, 'store']);
             Route::put('/{id}', [App\Http\Controllers\SaleItemController::class, 'update']);

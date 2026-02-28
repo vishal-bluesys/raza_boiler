@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('route_builder', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('routename')->nullable();
             $table->unsignedBigInteger('vehicleid');
             $table->unsignedBigInteger('driverid');
             $table->date('deliverydate');

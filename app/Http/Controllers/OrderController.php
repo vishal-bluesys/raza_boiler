@@ -18,7 +18,7 @@ class OrderController extends Controller{
         $validator = Validator::make($request->all(), [
             'customerid' => 'required|integer',
             'orderdate' => 'required|date',
-            'orderstatus' => 'required|in:delivered,canceled,intransit',
+            'orderstatus' => 'required|in:delivered,canceled,intransit,ordered',
             'created_by' => 'nullable|integer',
             'updated_by' => 'nullable|integer',
             'items' => 'required|array|min:1',
@@ -52,7 +52,7 @@ class OrderController extends Controller{
         $validator = Validator::make($request->all(), [
             'customerid' => 'sometimes|integer',
             'orderdate' => 'sometimes|date',
-            'orderstatus' => 'sometimes|in:delivered,canceled,intransit',
+            'orderstatus' => 'sometimes|in:delivered,canceled,intransit,ordered',
             'created_by' => 'nullable|integer',
             'updated_by' => 'nullable|integer',
         ]);

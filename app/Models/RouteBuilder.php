@@ -13,6 +13,7 @@ class RouteBuilder extends Model
     protected $table = 'route_builder';
 
     protected $fillable = [
+        'routename',
            'vehicleid',
            'driverid',
            'deliverydate',

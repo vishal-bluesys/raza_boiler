@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('customerid');
             $table->date('orderdate');
-            $table->enum('orderstatus', ['delivered', 'canceled', 'intransit']);
+            $table->enum('orderstatus', ['delivered', 'canceled', 'intransit','ordereceived']);
             $table->timestamps();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();

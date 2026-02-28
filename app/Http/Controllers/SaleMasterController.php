@@ -9,6 +9,7 @@ use App\Models\Orderitem;
 use App\Models\RouteBuilder;
 use App\Models\RouteStop;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class SaleMasterController extends Controller
 {
@@ -23,17 +24,45 @@ class SaleMasterController extends Controller
         if ($saleDate !== null) {
             $query->whereDate('saledate', $saleDate);
         } 
-        return response()->json($query->with('customer')->get());
+        //loop through the saleitems and calculate the total sale for each item and add it to the item details
+        $sales = $query->with('customer')->get();
+        foreach ($sales as $sale) {
+            $sale->total_sale = 0;
+            foreach ($sale->saleitems as $item) {
+                $sale->total_sale += $item->totalsale;
+            }
+        }
+        return response()->json($sales);
     }
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+         $validator = Validator::make($request->all(), [
             'customerid' => 'required|integer',
             'saledate' => 'required|date',
             'salestatus' => 'required|in:open,close,reopen',
-        ]);
+            'items' => 'required|array|min:1',
+            'items.*.itemid' => 'required|integer',
+            'items.*.itemweight' => 'required|numeric',
+            'items.*.itemqty' => 'required|integer',
+            'items.*.actualrate' => 'required|numeric',
+            'items.*.salerate' => 'required|numeric',
+            'items.*.discounttype' => 'required|in:flat,percent',
+            'items.*.discount' => 'required|numeric',
+            //'items.*.totalsale' => 'required|numeric',  
+            ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+        $validated = $validator->validated();
+
         $sale = SaleMaster::create($validated);
+        foreach ($validated['items'] as $item) {
+
+            $item['saleid'] = $sale->id;
+            $item['totalsale'] = $item['itemweight'] * $item['salerate'] - ($item['discounttype'] == 'flat' ? $item['discount'] : ($item['itemweight'] * $item['salerate'] * $item['discount'] / 100));    
+            SaleItem::create($item);
+        }
         return response()->json(['message' => 'Sale created', 'data' => $sale], 201);
     }
 
@@ -48,12 +77,40 @@ class SaleMasterController extends Controller
     {
         $sale = SaleMaster::find($id);
         if (!$sale) return response()->json(['message' => 'Sale not found'], 404);
-        $validated = $request->validate([
+        $validator = Validator::make($request->all(), [
             'customerid' => 'integer',
             'saledate' => 'date',
             'salestatus' => 'in:open,close,reopen',
+            'items' => 'array|min:1',
+            'items.*.itemid' => 'integer',
+            'items.*.itemweight' => 'numeric',
+            'items.*.itemqty' => 'integer',
+            'items.*.actualrate' => 'numeric',
+            'items.*.salerate' => 'numeric',            
+            'items.*.discounttype' => 'in:flat,percent',
+            'items.*.discount' => 'numeric',
+            //'items.*.totalsale' => 'numeric',
         ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+        $validated = $validator->validated();
         $sale->update($validated);
+        if (isset($validated['items'])) {
+            foreach ($validated['items'] as $item) {
+                if (isset($item['id'])) {
+                    $saleItem = SaleItem::find($item['id']);
+                    if ($saleItem) {
+                        $item['totalsale'] = $item['itemweight'] * $item['salerate'] - ($item['discounttype'] == 'flat' ? $item['discount'] : ($item['itemweight'] * $item['salerate'] * $item['discount'] / 100));
+                        $saleItem->update($item);
+                    }
+                } else {
+                    $item['saleid'] = $sale->id;
+                    $item['totalsale'] = $item['itemweight'] * $item['salerate'] - ($item['discounttype'] == 'flat' ? $item['discount'] : ($item['itemweight'] * $item['salerate'] * $item['discount'] / 100));
+                    SaleItem::create($item);
+                }
+            }
+        }
         return response()->json(['message' => 'Sale updated', 'data' => $sale]);
     }
 
@@ -81,6 +138,9 @@ class SaleMasterController extends Controller
         
         $sale = $query->with('saleitems')->first();
 
+        if($sale) {
+            return response()->json(['message' => 'Already added Sale details for the day', 'data' => []]);
+        }
         
             $order = Order::query();
             if ($customerid !== null) { 
@@ -107,29 +167,29 @@ class SaleMasterController extends Controller
         // if sale is null then saleitemid is null
 
         $combinedData = [];
-        if ($sale) {
-            foreach ($sale->saleitems as $saleItem) {
-                $item = $saleItem->item;
-                $orderItem = null;
-                if ($order) {
-                    $orderItem = $order->items->firstWhere('itemid', $saleItem->itemid);
-                }
-                $routeStop = null;
-                if ($deliveryRoute) {
-                    $routeStop = $deliveryRoute->route_stops->firstWhere('customerid', $customerid);
-                }
-                // Prepare the combined data for each sale item
-                $combinedData[] = [
-                    'saleitemid' => $saleItem->id,
-                    'itemid' => $item ? $item->id : null,
-                    'itemname' => $item ? $item->name : null,
-                    'orderedweight' => $orderItem ? $orderItem->weight : 0,
-                    'deliveredweight' => 0, // Default value, would be set based on delivery data
-                    'deliveryrate' => 0, // Default value, would be set based on delivery data
-                    'deliverystatus' => 'pending', // Default status, would be set based on delivery data
-                ];
-            }
-        }
+        // if ($sale) {
+        //     foreach ($sale->saleitems as $saleItem) {
+        //         $item = $saleItem->item;
+        //         $orderItem = null;
+        //         if ($order) {
+        //             $orderItem = $order->items->firstWhere('itemid', $saleItem->itemid);
+        //         }
+        //         $routeStop = null;
+        //         if ($deliveryRoute) {
+        //             $routeStop = $deliveryRoute->route_stops->firstWhere('customerid', $customerid);
+        //         }
+        //         // Prepare the combined data for each sale item
+        //         $combinedData[] = [
+        //             'saleitemid' => $saleItem->id,
+        //             'itemid' => $item ? $item->id : null,
+        //             'itemname' => $item ? $item->name : null,
+        //             'orderedweight' => $orderItem ? $orderItem->weight : 0,
+        //             'deliveredweight' => 0, // Default value, would be set based on delivery data
+        //             'deliveryrate' => 0, // Default value, would be set based on delivery data
+        //             'deliverystatus' => 'pending', // Default status, would be set based on delivery data
+        //         ];
+        //     }
+        // }
         if ($order && !$sale) {
             foreach ($order->items as $orderItem) {
                 $item = $orderItem->item;
