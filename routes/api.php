@@ -4,10 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dashboard/stats', [DashboardController::class, 'stats']);
 
 Route::prefix('users')->middleware(['jwt.auth'])->group(function () {
     Route::get('/', [UserController::class, 'index']); // Get users list
