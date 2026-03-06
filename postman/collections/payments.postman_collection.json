@@ -1,0 +1,315 @@
+{
+  "info": {
+    "_postman_id": "855d1c4d-9daa-4b39-8a77-85fe2d7935df",
+    "name": "Payments API",
+    "description": "CRUD operations for payments",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Payments",
+      "id": "85e91ae6-6d83-4e22-b4af-b22e7111b8af",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzI3NjE2NjQsImV4cCI6MTc3MjkzNDQ2NSwibmJmIjoxNzcyNzYxNjY1LCJqdGkiOiJHc1BzNnBrT1Jia210VFlHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ucaRYzhpk1axknTmoEGcl09LDcqRM2apoqvOgvUTOUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/payments",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "payments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Payments (with filters)",
+      "id": "1d860215-f226-41b6-8cb9-732eac8e31a5",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzI3NjE2NjQsImV4cCI6MTc3MjkzNDQ2NSwibmJmIjoxNzcyNzYxNjY1LCJqdGkiOiJHc1BzNnBrT1Jia210VFlHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ucaRYzhpk1axknTmoEGcl09LDcqRM2apoqvOgvUTOUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/payments?usertype=customer&paymenttype=paid&paymentmode=online&name=John&paymentdate=2026-03-06",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "usertype",
+              "value": "customer",
+              "uuid": "0656d079-f461-4458-9dd2-bc31e0366898"
+            },
+            {
+              "key": "paymenttype",
+              "value": "paid",
+              "uuid": "5069f97f-66e8-4901-9861-02a3355b48a5"
+            },
+            {
+              "key": "paymentmode",
+              "value": "online",
+              "uuid": "b8692884-d1e4-4396-a445-7501ed230e30"
+            },
+            {
+              "key": "name",
+              "value": "John",
+              "uuid": "01770ddc-0b29-4af1-8aae-5b8d0ca056f9"
+            },
+            {
+              "key": "paymentdate",
+              "value": "2026-03-06",
+              "uuid": "0e0d181b-0d41-4810-ac66-938b29b827ba"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Show Payment",
+      "id": "11cfa980-aae0-48fc-b8e7-e6693473933f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzI3NjE2NjQsImV4cCI6MTc3MjkzNDQ2NSwibmJmIjoxNzcyNzYxNjY1LCJqdGkiOiJHc1BzNnBrT1Jia210VFlHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ucaRYzhpk1axknTmoEGcl09LDcqRM2apoqvOgvUTOUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/payments/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "payments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Payment",
+      "id": "e5e6a5df-54a7-4715-bc7d-801face12ea6",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzI3NjE2NjQsImV4cCI6MTc3MjkzNDQ2NSwibmJmIjoxNzcyNzYxNjY1LCJqdGkiOiJHc1BzNnBrT1Jia210VFlHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ucaRYzhpk1axknTmoEGcl09LDcqRM2apoqvOgvUTOUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usertype\": \"customer\",\n  \"userid\": 16,\n  \"paymentamount\": 1000.00,\n  \"paymenttype\": \"paid\",\n  \"paymentmode\": \"online\",\n  \"transaction_cheque_no\": \"123985674\",\n  \"paymentdate\": \"2026-03-06\",\n  \"created_by\": 1,\n  \"updated_by\": 1\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/payments",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "payments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Payment",
+      "id": "12f2e113-3533-4f22-9f9c-ef1d478f1a7e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzI3NjE2NjQsImV4cCI6MTc3MjkzNDQ2NSwibmJmIjoxNzcyNzYxNjY1LCJqdGkiOiJHc1BzNnBrT1Jia210VFlHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ucaRYzhpk1axknTmoEGcl09LDcqRM2apoqvOgvUTOUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"paymentamount\": 2000.00,\n  \"paymenttype\": \"received\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/payments/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "payments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Payment",
+      "id": "3fd4da1d-ae32-4302-9e09-08c317df0469",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/payments/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "payments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Company/Customer List",
+      "id": "2592fbca-2f78-48fb-82af-455ff27d1272",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/payments/entities?type=company",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "payments",
+            "entities"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "company"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Customer List",
+      "id": "568fdabb-205e-4e7a-96ec-c4b5988c6f9f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzI3NjE2NjQsImV4cCI6MTc3MjkzNDQ2NSwibmJmIjoxNzcyNzYxNjY1LCJqdGkiOiJHc1BzNnBrT1Jia210VFlHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ucaRYzhpk1axknTmoEGcl09LDcqRM2apoqvOgvUTOUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/payments/entities?type=customer",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "payments",
+            "entities"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "customer",
+              "uuid": "e16c6f14-023c-4ceb-abe7-3d18675c1e6d"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

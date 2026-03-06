@@ -50,6 +50,15 @@ Route::prefix('purchasemaster')->middleware(['jwt.auth'])->group(function () {
     Route::delete('/{id}', [App\Http\Controllers\PurchasemasterController::class, 'destroy']);
 });
 
+Route::prefix('payments')->middleware(['jwt.auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\PaymentsController::class, 'index']); // List payments
+    Route::get('/{id}', [App\Http\Controllers\PaymentsController::class, 'show']); // Show payment
+    Route::post('/', [App\Http\Controllers\PaymentsController::class, 'store']); // Create payment
+    Route::put('/{id}', [App\Http\Controllers\PaymentsController::class, 'update']); // Update payment
+    Route::delete('/{id}', [App\Http\Controllers\PaymentsController::class, 'destroy']); // Delete payment
+    Route::get('/clist', [App\Http\Controllers\PaymentsController::class, 'getEntityList']); // Get company/customer list
+});
+
 Route::prefix('orders')->middleware(['jwt.auth'])->group(function () {
     Route::get('/', [App\Http\Controllers\OrderController::class, 'index']);
     Route::get('/{id}', [App\Http\Controllers\OrderController::class, 'show']);
@@ -162,3 +171,5 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
             Route::get('/maintanance', [App\Http\Controllers\ReportController::class, 'maintananceReport']);
             Route::get('/order', [App\Http\Controllers\ReportController::class, 'orderReport']);
         });
+
+         Route::get('/clist', [App\Http\Controllers\PaymentsController::class, 'getEntityList']); // Get company/customer list
