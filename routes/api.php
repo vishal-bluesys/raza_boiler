@@ -129,6 +129,8 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
               Route::put('/{id}', [App\Http\Controllers\RouteBuilderController::class, 'update']);
               Route::delete('/{id}', [App\Http\Controllers\RouteBuilderController::class, 'destroy']);
               Route::patch('/{id}/status', [App\Http\Controllers\RouteBuilderController::class, 'updateStatus']);
+              Route::get('/{id}/purchases', [App\Http\Controllers\RouteBuilderController::class, 'getRoutePurchaseDetails']);  
+              
         });
 
         Route::prefix('route-stops')->middleware(['jwt.auth'])->group(function () {
@@ -173,3 +175,4 @@ Route::prefix('orderitems')->middleware(['jwt.auth'])->group(function () {
         });
 
          Route::get('/clist', [App\Http\Controllers\PaymentsController::class, 'getEntityList']); // Get company/customer list
+         Route::get('/drivers', [App\Http\Controllers\RouteBuilderController::class, 'deliveryUsers']);
