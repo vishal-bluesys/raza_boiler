@@ -46,11 +46,12 @@ class ReportController extends Controller
             foreach ($sale->saleitems as $item) {
            
             $data[] = [
-                    $sale->customer->customer_name ?? '',
-                    $item->item->itemname ?? '',
-                    $sale->saledate,
-                    $item->itemweight,
-                    $item->salerate,
+                  'customername'=>  $sale->customer->customer_name ?? '',
+                    'itemname'=> $item->item->itemname ?? '',
+                    'saledate'=> date('d-m-Y', strtotime($sale->saledate)) ?? $sale->saledate,
+                    'weight'=> $item->itemweight,
+                    'rate'=> $item->salerate,
+                    'total'=> $item->itemweight * $item->salerate,
                 ];
             }
         }

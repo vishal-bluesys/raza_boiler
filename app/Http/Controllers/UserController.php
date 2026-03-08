@@ -64,7 +64,7 @@ class UserController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'username' => 'required|string|max:255|unique:users',
+            //'username' => 'required|string|max:255|unique:users',
             'email' => 'required|email|unique:users',
             'mobileno' => 'nullable|string|max:20',
             'dob' => 'nullable|date',
@@ -74,8 +74,9 @@ class UserController extends Controller
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
         }
-        $data = $validator->validated();
 
+        $data = $validator->validated();
+        $data['username'] = $data['email']; // Set username same as email
         $data['password'] = bcrypt($data['password']);
         $user = User::create($data);
         return response()->json(['message' => 'User created successfully', 'user' => $user], 201);
