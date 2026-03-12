@@ -72,14 +72,15 @@ class ReportController extends Controller
         if ($request->filled('start_date') && $request->filled('end_date')) {
             $query->whereBetween('purchasedate', [$request->start_date, $request->end_date]);
         }
-        $purchases = $query->get();
+        $purchases = $query->with('company')->get();
         $data = [];
         foreach ($purchases as $purchase) {
             $data[] = [
-                $purchase->company->company_name ?? '',
-                $purchase->purchasedate,
-                $purchase->parchaseweight,
-                $purchase->rateofpurchase,
+                'company_name' => $purchase->company->company_name ?? '',
+                'purchasedate' => $purchase->purchasedate,
+                'parchaseweight' => $purchase->parchaseweight,
+                'rateofpurchase' => $purchase->rateofpurchase,
+                'total_amount' => $purchase->parchaseweight * $purchase->rateofpurchase,
             ];
         }
         if ($request->filled('export') && $request->export == 'excel') {
@@ -102,7 +103,7 @@ class ReportController extends Controller
         if ($request->filled('itemid')) {
             $query->where('maintanancetype', $request->itemid);
         }
-        $maintanances = $query->get();
+        $maintanances = $query->with('maintainancetype', 'vehicle')->get();
         $data = [];
         foreach ($maintanances as $m) {
             $driverName = '';
@@ -111,10 +112,11 @@ class ReportController extends Controller
                 $driverName = $driver ? $driver->name : '';
             }
             $data[] = [
-                $driverName,
-                $m->maintanancedate,
-                $m->maintanancetype,
-                $m->maintanancecost,
+                'driver_name' => $driverName,
+                'vehicle_number' => $m->vehicle ? $m->vehicle->rcnumber : '',
+                'maintanancedate' => $m->maintanancedate,
+                'maintanancetype' => $m->maintainancetype ? $m->maintainancetype->maintanancetype : '',
+                'maintanancecost' => $m->maintanancecost,
             ];
         }
         if ($request->filled('export') && $request->export == 'excel') {
@@ -144,10 +146,10 @@ class ReportController extends Controller
         foreach ($orders as $order) {
             foreach ($order->items as $item) {
                 $data[] = [
-                    $order->customer->customer_name ?? '',
-                    $item->item->itemname ?? '',
-                    $order->orderdate,
-                    $item->itemweight,
+                    'customer_name' => $order->customer->customer_name ?? '',
+                    'itemname' => $item->item->itemname ?? '',
+                    'orderdate' => $order->orderdate,
+                    'itemweight' => $item->itemweight,
                 ];
             }
         }

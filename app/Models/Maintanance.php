@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Activitylog\LogOptions;
+use App\Models\VehicleMaster;
+use App\Models\MaitainanceType;
+use Illuminate\Support\Facades\App;
 
 class Maintanance extends Model
 {
@@ -31,4 +34,15 @@ class Maintanance extends Model
             ->logOnlyDirty()
             ->dontSubmitEmptyLogs();
     }
+
+    public function vehicle()
+    {
+        return $this->belongsTo(VehicleMaster::class, 'vehicleid');
+    }
+
+    public function maintainancetype() // Define the relationship method for maintanance type
+    {
+        return $this->belongsTo(MaitainanceType::class, 'maintanancetype');
+    }
+
 }
